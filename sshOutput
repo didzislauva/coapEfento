@@ -1,0 +1,41 @@
+[coap.server.lv (14)] [me@server40 coap.server.lv]$ node app2.js
+CoAP server is running on port 5683
+Raw payload length: 355
+Raw payload (hex): 100518ac0220ffffffff0f28ffffffff0f48ffff0350ffff035a0f636f61702e736b696c6c75702e6c7660b32c6a0d31382e3138342e32342e32333970d0860378b02c8201017f8801c0843da201248ff6028ff6028ff6028ff6028ff6028ff6028ff6028ff6028ff6028ff6028ff6028ff602a8010ab801ff01ca0106282c02414e4fd00101da0106050000000000e2010410012003e201021001e201021001e201021001e201021001e201021001e201021001e201021001e201021001e201021001e201021001e201021001e80180c60af801ffff038202016d8a020163920201699a020174a00201b002a697afb906b802df82afb906c002e8fb03c802e8fb03d20208ff01ff01ff01ff01d80282de34e00202f202120802010102020b010bffff03ffff03ffff03fa02021801fa02021801fa02021801fa02021801fa02021801fa020218019203093c3c05050505050514980301b203017fba03017fc203017f
+Failed to decode message: RangeError: index out of range: 355 + 10 > 355
+    at indexOutOfRange (/home/me/nodevenv/coap.server.lv/14/lib/node_modules/protobufjs/src/reader.js:13:12)
+    at BufferReader.read_uint32 [as uint32] (/home/me/nodevenv/coap.server.lv/14/lib/node_modules/protobufjs/src/reader.js:98:19)
+    at Type.ProtoChannel$decode [as decode] (eval at Codegen (/home/me/nodevenv/coap.server.lv/14/lib/node_modules/@protobufjs/codegen/index.js:50:33), <anonymous>:8:11)
+    at Type.decode_setup [as decode] (/home/me/nodevenv/coap.server.lv/14/lib/node_modules/protobufjs/src/type.js:507:25)
+    at Type.ProtoMeasurements$decode [as decode] (eval at Codegen (/home/me/nodevenv/coap.server.lv/14/lib/node_modules/@protobufjs/codegen/index.js:50:33), <anonymous>:29:28)
+    at Type.decode_setup [as decode] (/home/me/nodevenv/coap.server.lv/14/lib/node_modules/protobufjs/src/type.js:507:25)
+    at CoAPServer.<anonymous> (/home/me/coap.server.lv/app2.js:16:43)
+    at CoAPServer.emit (events.js:400:28)
+    at CoAPServer._handle (/home/me/nodevenv/coap.server.lv/14/lib/node_modules/coap/dist/lib/server.js:496:14)
+    at Object.handleServerRequest (/home/me/nodevenv/coap.server.lv/14/lib/node_modules/coap/dist/lib/middlewares.js:47:24)
+Raw payload length: 44
+Raw payload (hex): 0a06282c02414e4f10011805220d080510a197afb9062a03018f0228bf9dafb906300438184001480a820100
+Decoded message: ProtoMeasurements {
+  channels: [
+    ProtoChannel {
+      sampleOffsets: [Array],
+      type: 5,
+      timestamp: 1730923425
+    }
+  ],
+  serialNum: <Buffer 28 2c 02 41 4e 4f>,
+  batteryStatus: true,
+  measurementPeriodBase: 5,
+  nextTransmissionAt: 1730924223,
+  transferReason: 4,
+  signal: 24,
+  measurementPeriodFactor: 1,
+  hash: 10,
+  cloudToken: ''
+}
+Channel 1:
+  Type: 5
+  Timestamp: 1730923425
+  Start Point: N/A
+  Event 1: Closed/Off at timestamp 1730923425
+  Event 2: Closed/Off at timestamp 1730923560
